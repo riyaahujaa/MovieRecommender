@@ -1,0 +1,141 @@
+
+
+body{
+    align-items: center;
+
+}
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 500px;
+    height: 100vh; 
+  }
+
+  .login-form {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+  }
+  
+  /* Style inputs and button */
+  .login-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  
+  .login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .login-form button:hover {
+    background-color: #0056b3;
+  }
+
+  @keyframes slideFadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .main-heading {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 32px;
+    font-weight: bold;
+    animation: slideFadeIn 1s ease-out forwards;
+    opacity: 0; /* Ensure it starts invisible */
+  }
+  
+  @keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  @keyframes blink {
+    0% { opacity: 1; }
+    49% { opacity: 1; }
+    50% { opacity: 0; }
+    99% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  .fancy-heading {
+    font-family: 'Courier New', Courier, monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid transparent;
+    width: 0;
+    animation:
+      typewriter 2s steps(20, end) forwards,
+      fadeIn 1s ease-in-out;
+    font-size: 32px;
+    margin-top: 30px;
+    text-align: center;
+    color: #222;
+  }
+  
+  .cursor {
+    animation: blink 1s infinite;
+    color: #007bff;
+    font-weight: bold;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .login-form button {
+    background: #00d4ff;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .login-form button:hover {
+    background: #1de9b6;
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 212, 255, 0.5);
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+  
+  .login-form {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+
+  
+  

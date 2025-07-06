@@ -1,0 +1,289 @@
+.container {
+  max-width: 100%;
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.toggle-container {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.grid.compact .card {
+  width: 100px;
+  height: auto;
+}
+
+.grid.expanded .card {
+  width: 180px;
+  height: auto;
+}
+
+.card {
+  position: relative;
+  width: 100px;
+  flex: 0 0 auto;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-content {
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+}
+
+.card h3 {
+  font-size: 1rem;
+  white-space: normal;      
+  overflow: visible;        
+  text-overflow: unset;     
+  margin: 0.5em 0;
+  text-align: center;
+}
+
+
+.card p {
+  font-size: 0.9rem;
+  line-height: 1.3;
+  margin-top: 0.5em;
+}
+
+.card:hover .tooltip {
+  opacity: 1;
+  transform: translate(-50%, 0);
+  pointer-events: auto;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%, 10px);
+  background-color: #333;
+  color: #fff;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 10;
+}
+
+button {
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  background-color: #222;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #444;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.pagination {
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pagination button {
+  padding: 0.5rem 1rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background-color: #888;
+  cursor: not-allowed;
+}
+
+.login-form {
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
+}
+
+.login-form input {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+}
+.login-form button {
+  margin-top: 0.5rem;
+}
+.error {
+  color: red;
+  margin-top: 1rem;
+}
+.login-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-heading {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 32px;
+}
+
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.main-heading {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 32px;
+  font-weight: bold;
+  animation: slideFadeIn 1s ease-out;
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  49% { opacity: 1; }
+  50% { opacity: 0; }
+  99% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.fancy-heading {
+  font-family: 'Courier New', Courier, monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid transparent;
+  width: 0;
+  animation:
+    typewriter 2s steps(20, end) forwards,
+    fadeIn 1s ease-in-out;
+  font-size: 32px;
+  margin-top: 30px;
+  text-align: center;
+  color: #222;
+}
+
+.cursor {
+  animation: blink 1s infinite;
+  color: #007bff;
+  font-weight: bold;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.logout-btn,
+.change-user-btn {
+  padding: 8px 14px;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.change-user-btn {
+  background-color: #6c5ce7;
+}
+
+.logout-btn:hover {
+  background-color: #ff4757;
+}
+
+.change-user-btn:hover {
+  background-color: #4834d4;
+}
+
+.top-right-buttons {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.top-right-buttons button {
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.top-right-buttons button:hover {
+  background-color: #c2185b;
+}
